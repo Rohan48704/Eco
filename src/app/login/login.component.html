@@ -1,0 +1,30 @@
+<img src="https://cdn.motor1.com/images/mgl/13jgw/s1/rolls-royce-black-badge-wraith-by-spofec.jpg" alt="">
+
+<div class="container">
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <form class="p-5 " autocomplete="off" #loginform="ngForm" (ngSubmit)="login(loginform)">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" [(ngModel)]="logindata.email" #email="ngModel" required>
+            <small id="emailHelp" class="form-text text-muted">Invalid Email</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+              placeholder="Enter password" [(ngModel)]="logindata.password" #password="ngModel" required>
+            <!-- <small id="passwordHelp" class="form-text text-muted" *ngif="(password?.touched ||password?.submitted ">Invalid Password</small> -->
+          </div>
+  
+          <button type="submit" class="btn btn-primary mt-3 btn-sm">Login</button>
+          <div class="data">
+            <h4 class="mt-1">Need a account?</h4>
+            <h4 class="ms-3 mt-1">Forget Password</h4>
+          </div>
+          <a routerLink="/register">Register</a>
+        </form>
+      </div>
+  
+    </div>
+  </div>

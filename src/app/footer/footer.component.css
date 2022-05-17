@@ -1,0 +1,43 @@
+body {
+    background-color: #eeeeee;
+    font-family: 'Open Sans', serif;
+    font-size: 14px
+}
+
+.container-fluid {
+    padding-top: 50px;
+    background-color: black;
+    min-height: 50vh;
+}
+.footer-copyright {
+    margin-top: 13px;
+    text-align: center
+}
+
+a {
+    text-decoration: none !important;
+    color: #777a7c
+}
+
+.description {
+    font-size: 12px
+}
+
+.fa-facebook-f {
+    color: #3b5999
+}
+.fa-instagram {
+    color: #e4405f
+}
+
+.fa-youtube {
+    color: #cd201f
+}
+
+.fa-twitter {
+    color: #55acee
+}
+
+.logo-footer {
+    height: 80px
+}

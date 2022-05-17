@@ -1,0 +1,32 @@
+<body>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <video autoplay controls muted loop>
+          <source src="../../assets/image/my new video.mp4" type="video/mp4">
+        </video>
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid " style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+      <div class="row">
+        <ng-container *ngFor="let item of productList">
+          <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <a [routerLink]="['/detail',item.title,item.image,item.description,item.price]">
+              <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.title}}
+              </h5>
+            </a>
+            <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.description}}
+            <p>
+            <p><strong>Price:</strong>{{item.price |currency:'INR'}}</p>
+            <button class="btn btn-primary" (click)="addProduct(item)">Add to cart</button>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    </div>
+</body>

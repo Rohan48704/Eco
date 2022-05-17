@@ -1,0 +1,55 @@
+  .navbar{
+      min-height: 4rem;
+      background-color: #222222;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+  }
+  .logo{
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+  }
+  .shoppingcart{
+            color: aliceblue;
+            margin-top: 10px;
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  /* .sin{
+      margin-left: 30%;
+  } */
+  .form-control { 
+    border-radius: 3px; 
+    width: 400px; 
+    margin-left: 20px; 
+}
+.dropbtn {
+    
+    color: white;
+    border-radius: 50%;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  
+  
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  

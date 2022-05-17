@@ -1,0 +1,31 @@
+<div class="header container-fluid" style="padding:0px">
+  <nav class="navbar navbar-expand-lg" >
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <img routerLink="" class="logo" src="https://www.carlogos.org/logo/Rolls-Royce-logo-2048x2048.png" alt="image">
+          </li>
+          <button routerLink="/cart" class="btn btn-dark">
+            <i style="font-size:30px" class="fa-solid fa-cart-plus" style="color:white;"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+          </button>
+        </ul>
+        <form class="d-flex box m-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <div *ngIf="user">
+          <div class="dropdown">
+            <button class="dropbtn bg-dark"> {{user.displayName}} </button>
+            <div class="dropdown-content">
+              <button (click)="logout()">Logout</button>
+            </div>
+          </div>
+        </div>
+        <div class="sin" *ngIf="!user">
+          <a routerLink="/login">login</a><span class="text-light">|</span>
+          <a routerLink="/register">register</a>
+        </div>
+      </div>
+  </nav>
+</div>
