@@ -13,7 +13,7 @@
     </div>
     <div class="container-fluid " style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
       <div class="row">
-        <ng-container *ngFor="let item of productList">
+        <ng-container *ngFor="let item of datalist">
           <div class="card col-md-3">
             <img src="{{item.image}}" alt="">
             <a [routerLink]="['/detail',item.title,item.image,item.description,item.price]">
