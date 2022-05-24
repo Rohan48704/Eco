@@ -19,6 +19,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     CartComponent,
     LayoutComponent,
     ProductsDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

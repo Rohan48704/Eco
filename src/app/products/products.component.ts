@@ -29,12 +29,10 @@ export class ProductsComponent implements OnInit {
  
 
   
-    
-      
-    
 
 
 
+  
   getproduct(){
     this.product.getPosts().subscribe((res:any)=>{
       this.datalist=res

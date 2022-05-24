@@ -47,8 +47,12 @@ export class ProductService {
   }
 
   deletePost(payload:any):any{
-    this.documentRefernce=this.fireStore.doc('Posts/'+payload.id);
+    this.documentRefernce=this.fireStore.doc('item/'+payload.id);
     this.documentRefernce.delete()
+  }
+  updatePost(payload:any):any{
+    this.documentRefernce=this.fireStore.doc('item/'+payload.id);
+    this.documentRefernce.update(payload);
   }
 
 }
