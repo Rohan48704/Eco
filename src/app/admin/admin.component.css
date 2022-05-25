@@ -1,22 +1,47 @@
-.card{
-    height: 60vh;
-    margin: 25px;
-    padding: 25px;
-   
+.navbar{
+    min-height: 4rem;
+    background-color: #222222;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.logo{
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+.card {
+ padding: 25px;
 }
 
-.center{
+.center {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.center .btn{
+.center .btn {
     font-size: 14px !important;
     margin-top: 20px !important;
     font-weight: 400;
     padding: 12px 72px;
     border-radius: 3px !important;
 }
+.pt-5 {
+    padding-top: 5rem!important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+
+
+
+
+

@@ -38,7 +38,6 @@ export class AdminComponent implements OnInit {
   addProduct() {
     const payload =
     {
-
       image: this.image,
       title: this.title,
       description: this.description,
@@ -54,16 +53,6 @@ export class AdminComponent implements OnInit {
   }
   deletePost(listdata: any): void {
     this.product.deletePost(listdata);
-  }
-  populatePost(listdata: any): void {
-    
-    const payload= {
-      image: this.image,
-      title: this.title,
-      description: this.description,
-      price: this.price
-
-    };
   }
   updatePost(postData:any): void {
     const payload = {

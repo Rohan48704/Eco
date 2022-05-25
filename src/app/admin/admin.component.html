@@ -1,35 +1,69 @@
-<app-header></app-header>
+<div class="header container-fluid" style="padding:0px">
+  <nav class="navbar navbar-expand-lg" >
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <img routerLink="" class="logo" src="https://www.carlogos.org/logo/Rolls-Royce-logo-2048x2048.png" alt="image">
+          </li>
+          <li>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add Products
+            </button>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Give Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="card container" style="width: 18rem;">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="exampleUsername" aria-describedby="UserHelp" name="title"
+                    [(ngModel)]="title">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Description</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="description"
+                    [(ngModel)]="description">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">image</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="image" [(ngModel)]="image">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Price</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="price" [(ngModel)]="price">
+                </div>
+              </form>
+            </div>
+          </div>
 
-
-<div class="card container" style="width: 18rem;">
-  <div class="card-body">
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Title</label>
-        <input type="text" class="form-control" id="exampleUsername" aria-describedby="UserHelp" name="title"
-          [(ngModel)]="title">
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Description</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="description"
-          [(ngModel)]="description">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" (click)="addProduct()">Save Changes</button>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">image</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="image" [(ngModel)]="image">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Price</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="price" [(ngModel)]="price">
-      </div>
-      <button type="button" class="btn btn-primary  btn-sm" (click)="addProduct()">Add</button>
-    </form>
+    </div>
   </div>
 </div>
+
+
+
 <div class="container pt-5">
   <div class="card-table">
     <div class="card-product">
-      <table class="table table-responsive">
+      <table class="table table-responsive" border="1">
         <thead>
           <tr>
             <th>Sr.No</th>

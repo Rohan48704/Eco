@@ -20,6 +20,7 @@ import { ProductsDetailsComponent } from './products-details/products-details.co
 import { FooterComponent } from './footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AdminComponent } from './admin/admin.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { AdminComponent } from './admin/admin.component';
     LayoutComponent,
     ProductsDetailsComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+<app-header></app-header>
+<img src="https://cdn.motor1.com/images/mgl/13jgw/s1/rolls-royce-black-badge-wraith-by-spofec.jpg" alt="">
+
+<div class="card container" style="width: 18rem;">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="text" class="form-control" id="exampleUsername" aria-describedby="UserHelp" name="title"
+            [(ngModel)]="email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="description"
+            [(ngModel)]="password">
+        </div>
+        <button type="button" class="btn btn-primary  btn-sm" (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>

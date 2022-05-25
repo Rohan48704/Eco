@@ -26,14 +26,7 @@ export class ProductsComponent implements OnInit {
     this.getproduct()
   }
 
- 
-
-  
-
-
-
-  
-  getproduct(){
+ getproduct(){
     this.product.getPosts().subscribe((res:any)=>{
       this.datalist=res
     })
