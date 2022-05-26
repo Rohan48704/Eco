@@ -50,8 +50,8 @@ export class ProductService {
     this.documentRefernce=this.fireStore.doc('item/'+payload.id);
     this.documentRefernce.delete()
   }
-  updatePost(payload:any):any{
-    this.documentRefernce=this.fireStore.doc('item/'+payload.id);
+  updatePost(payloadid:any,payload:any):any{
+    this.documentRefernce=this.fireStore.doc('item/'+payloadid);
     this.documentRefernce.update(payload);
   }
 

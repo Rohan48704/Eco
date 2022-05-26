@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Price</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="price" [(ngModel)]="price">
+                  <input type="number" class="form-control" id="exampleInputPassword1" name="price" [(ngModel)]="price">
                 </div>
               </form>
             </div>
@@ -53,6 +53,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-danger" (click)="addProduct()">Save Changes</button>
+        <button type="button" class="btn btn-danger" (click)="updatePost()" *ngIf="state">Update</button>
       </div>
     </div>
   </div>
@@ -80,7 +81,7 @@
             <td style="width:12%;">{{item.price}}</td>
             <td>
               <button class="btn btn-danger" (click)="deletePost(item)"><i class="fas fa-trash-alt"></i></button>
-              <button type="button" (click)=" updatePost(item)">Edit</button>
+              <button type="button" (click)="populatePost(item)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button>
             </td>
           </tr>
 

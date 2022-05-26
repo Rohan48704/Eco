@@ -19,9 +19,11 @@ export interface Cart {
 export class AdminComponent implements OnInit {
   title = "";
   description = "";
-  price = 0;
+  price:number | undefined;
   image = "";
   datalist: any = []
+  state:boolean=false
+  id:string=""
 
 
   constructor(private product: ProductService) {
@@ -54,20 +56,30 @@ export class AdminComponent implements OnInit {
   deletePost(listdata: any): void {
     this.product.deletePost(listdata);
   }
-  updatePost(postData:any): void {
+  updatePost() {
     const payload = {
-      title: postData.value.title,
-      image:postData.value.image,
-      description: postData.value.description,
-      price: postData.value.price
+      title:this.title,
+     description: this.description,
+      price: this.price
      
     };
-    this.product.updatePost(payload);
+    this.product.updatePost(this.id,payload); 
     this.image = "";
     this.description = "";
     this.price = 0;
     this.title = ""
+    this.state=false
   }
+  populatePost(postData:any) {
+    console.log("press")
+    this.state=true
+    this.title = postData.title
+    this.description =postData.description
+    this.price = postData.price
+    this.id=postData.id
+    
+  }
+
 
 
 }
